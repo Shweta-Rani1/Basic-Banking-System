@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Users</title>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Gabriela&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div style="font-family: 'Gabriela', serif;   font-size: 40px;
+    text-align: center;
+    margin: 20px;">Transaction</div>
+    <table>
+        <tr>
+            <th>Sr.No.</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Gender</th>
+            <th>Balance</th>
+            <th>Details</th>
+        </tr>
+        <nav id="sideNav">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="users.php">BANK USERS</a></li>
+                <li><a href="history.php">TRANSACTION HISTORY</a></li>
+                <li><a href="users.html">TRANSFER MONEY</a></li>
+                <li><a href="register.html">NEW USER</a></li>
+            </ul>
+        </nav>
+        <div id="connection">
+            <img src="images/menu.png" id="menuBtn">
+        </div>
+
+        <script>
+            let menuBtn = document.querySelector('#connection');
+            let sideNav = document.querySelector('#sideNav')
+
+            let condition = true;
+
+            menuBtn.addEventListener('click', function () {
+                if (condition) {
+                    sideNav.style.right = '0px';
+                    condition = false;
+                } else {
+                    sideNav.style.right = '-250px';
+                    condition = true;
+                }
+            })
+        </script>
+    </table>
+</body>
+
+</html>
